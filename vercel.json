@@ -1,0 +1,23 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://YOUR-STREAMLIT-APP.streamlit.app",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://YOUR-STREAMLIT-APP.streamlit.app/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
